@@ -1,0 +1,42 @@
+To use the graphing environment:
+    run the following command:
+        python TxtToExcel.py
+
+    If this doesnt work, you may need to run 
+        python3 TxtToExcel.py
+
+    If you get any include errors (library not installed), use one of the following commands:
+        pip install <library name>
+        pip3 install <library name>
+
+    Alternatively, you can install the libraries in a virtual environment (chatgpt is pretty good at walking you through this)
+
+
+To use the program:t
+
+    in the python file:
+        * change the input file name to the name of the file containing the data you want to graph
+        * change the output file name to the name of the excel file you want to save the graph to
+
+        * if you know which data point is the start of the test, change the boundaries to that data point
+        * if you know when the test ends, change the boundaries to that data point
+            * the indexes are how you would see the rows in the excel sheet 
+            (for example, 1 isnt a valid input because that row contains the headers)
+
+        * if you do not know when the test starts, just leave the boundaries blank
+            * the program will detect the start of the test automatically, and graph until the end of the data
+
+
+    The program then outputs the average slope of the data (in your command line) from the start of the test to the end
+        * this data will be graphed in the excel file
+        * because this library is old, the graph isnt formatted very well
+            * double click on the graph and select any of the usual excel formatting options once the graph is generated
+
+        Note: this outputs the average slope, not the slope of the line of best fit
+
+
+    If you have questions or want changes, feel free to contact Noah Vickerson on teams
+    Possible changes:
+        * plot the graph in matplotlib instead of excel for better formatting
+        * put the calculated slope of the test in a cell in the excel sheet
+        * calculate the line of best fit instead of slope
